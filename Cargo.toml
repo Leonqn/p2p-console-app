@@ -1,0 +1,22 @@
+[package]
+name = "p2p-test-task"
+version = "0.1.0"
+authors = ["Ilya Titkov <ilya@titkov.me>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = { version = "1", features = [ "derive" ] }
+tokio = { version = "1", features = [ "macros", "sync", "rt-multi-thread", "time", "net", "io-util", "io-std" ] }
+log = "0.4"
+env_logger = "0.8"
+anyhow = "1"
+structopt = "0.3"
+bytes = "1"
+tokio-stream = "0.1"
+
+[dev-dependencies]
+quickcheck = "1"
+quickcheck_macros = "1"
+futures = "0.3"
